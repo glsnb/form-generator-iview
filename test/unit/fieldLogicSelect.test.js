@@ -41,13 +41,13 @@ describe('fieldLogicInput', () => {
     });
 
     it('emit logicinput on-change', async () => {
-        wrapper.vm.$emit('on-change', '20');
+        wrapper.vm.$emit('on-change', 20);
         // 等待事件处理完成
         await wrapper.vm.$nextTick();
         // 断言事件的数量
         expect(wrapper.emitted('on-change').length).to.equal(1);
         // 断言事件的有效数据
-        expect(wrapper.emitted('on-change')[0]).to.deep.equal(['20']);
+        expect(wrapper.emitted('on-change')[0]).to.deep.equal([20]);
     });
 });
 
@@ -91,12 +91,12 @@ describe('fieldLogicSelect', () => {
     });
 
     it('emit logicinput on-change', async () => {
-        wrapper.vm.$emit('on-change', '2.0');
+        wrapper.vm.$emit('on-change', 2);
         // 等待事件处理完成
         await wrapper.vm.$nextTick();
         // 断言事件的数量
         expect(wrapper.emitted('on-change').length).to.equal(1);
         // 断言事件的有效数据
-        expect(wrapper.emitted('on-change')[0]).to.deep.equal(['2.0']);
+        expect(wrapper.emitted('on-change')[0]).to.deep.equal([2]);
     });
 });
